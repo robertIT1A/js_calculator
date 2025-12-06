@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .result {
+      border: solid 2px;
+      width: 22.5%;
+      height: 50px;
+    }
+    .button button {
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+    }
+  </style>
+  <body>
+    <p>Calculator</p>
+    <div class="result"></div>
+    <div class="button">
+      <div class="line_1">
+        <button onclick="console.log(calculation += 1)">1</button>
+        <button onclick="console.log(calculation += 2)">2</button>
+        <button onclick="console.log(calculation += 3)">3</button>
+        <button onclick="console.log(calculation += ' + ')">+</button>
+      </div>
+
+      <div class="line_2">
+        <button onclick="console.log(calculation += 4)">4</button>
+        <button onclick="console.log(calculation += 5)">5</button>
+        <button onclick="console.log(calculation += 6)">6</button>
+        <button onclick="console.log(calculation += ' - ')">-</button>
+      </div>
+
+      <div class="line_3">
+        <button onclick="console.log(calculation += 7)">7</button>
+        <button onclick="console.log(calculation += 8)">8</button>
+        <button onclick="console.log(calculation += 9)">9</button>
+        <button onclick="console.log(calculation += ' * ')">*</button>
+      </div>
+
+      <div class="line_4">
+        <button onclick="console.log(calculation += 0)">0</button>
+        <button onclick="console.log(calculation += ' . ')">.</button>
+        <button
+          onclick="eval(calculation); calculation = eval(calculation); console.log(calculation)"
+        >
+          =
+        </button>
+        <button onclick="console.log(calculation += ' / ')">/</button>
+      </div>
+
+      <button>Clear</button>
+    </div>
+  </body>
+
+  <script>
+    let calculation = "";
+  </script>
+</html>
